@@ -1,2 +1,2 @@
 # data_structures
-#Created a single main file ad different header files implementing each data structure in c++.
+#Created a single main file and different header files implementing each data structure in c++.
