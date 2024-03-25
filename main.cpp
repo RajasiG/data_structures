@@ -3,6 +3,7 @@
 #include "queue.h"
 #include "bstree.h"
 #include "hash.h"
+#include "graph.h"
 #include<bits/stdc++.h>
 #include<vector>
 #include <queue>
@@ -95,5 +96,12 @@ int main()
   }
   
   //Graph_Implementation
+  graph g;
+  g.insert_vertex(1);
+  g.insert_vertex(2);
+  g.insert_vertex(3);
+  g.insert_edge(1,2);
+  g.insert_edge(2,3);
+  g.display(g.start);
   return 0;
 }
