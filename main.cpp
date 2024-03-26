@@ -4,6 +4,8 @@
 #include "bstree.h"
 #include "hash.h"
 #include "graph.h"
+#include "recurse_fact.h"
+#include "recurse_fib.h"
 #include<bits/stdc++.h>
 #include<vector>
 #include <queue>
@@ -103,5 +105,18 @@ int main()
   g.insert_edge(1,2);
   g.insert_edge(2,3);
   g.display(g.start);
+
+
+  //Recursion _factorial
+  cout<<"\n Iterative factorial";
+  cout<<fact_iter(5);
+  cout<<"\n Recursive factorial";
+  cout<<fact_recur(5);
+
+   //Recursion _fibonacci
+  cout<<"\n Iterative factorial";
+  cout<<fibonacci_iter(5);
+  cout<<"\n Recursive factorial";
+  cout<<fibonacci_recur(5);
   return 0;
 }
