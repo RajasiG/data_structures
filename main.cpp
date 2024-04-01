@@ -4,8 +4,10 @@
 #include "bstree.h"
 #include "hash.h"
 #include "graph.h"
+ #include "merge_sort.h"
 #include "recurse_fact.h"
 #include "recurse_fib.h"
+#include "bfs_dfs_Tree.h"
 #include<bits/stdc++.h>
 #include<vector>
 #include <queue>
@@ -13,7 +15,7 @@ using namespace std;
 
 int main()
 {
-  //Hash_Implementation
+  Hash_Implementation
   vector<int> v= {1,2,3,4,5,6,1,2,3};
   map_recc(v);
   //String_Implementation
@@ -118,5 +120,35 @@ int main()
   cout<<fibonacci_iter(5);
   cout<<"\n Recursive factorial";
   cout<<fibonacci_recur(5);
+  Binary Search
+  Merge_Sort
+  vector<int> arr = {1,10,9,7,5,4};
+   int n = arr.size();
+   int mid= (n-1)/2;
+    cout<<mid;
+   merge_sort(arr, 0, n);
+  
+  cout<<"Sorted Array is: "<<endl;
+   vector<int>:: iterator trav;
+   for(trav = arr.begin(); trav != arr.end(); trav++) {
+        cout<<*trav<<"  ";
+     }
+  
+ //Breadth-DepthFirstSearch_tree
+  BTree bst_new;
+  bst_new.insert(3);
+  bst_new.insert(4);
+  bst_new.insert(1);
+  bst_new.insert(5);
+  bst_new.insert(9);
+  bst_new.insert(2);
+  cout<<"\n Levelorder:";
+  bst_new.bfs_traversal_T(bst_new.root);
+  cout<<"\n Inorder:";
+  bst_new.dfs_inorder_traversal_T(bst_new.root);
+  cout<<"\n Preorder:";
+  bst_new.dfs_preorder_traversal_T(bst_new.root);
+  cout<<"\n Postorder:";
+  bst_new.dfs_postorder_traversal_T(bst_new.root);
   return 0;
 }
